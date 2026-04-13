@@ -1,0 +1,36 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ELC_96_96', model='iTransformer', data='custom', root_path='/nfs/daojun/Data/TS_Small', data_path='electricity.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, seasonal_patterns='Monthly', d_block=96, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, attn=1, gate=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=3, learning_rate=0.0001, des='test', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='None', efficient_training=False, channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', post_train_lr=0.0001, continue_train_lr=1e-07, num_episodes=10, gamma=0.9, lmbda=0.9, eps=0.2, patch_len=2, stride=2, fc_dropout=0.05, head_dropout=0.0, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, version='Fourier', mode_select='random', modes=64, kappa=0.2, enc_in=321, dec_in=321, c_out=321)
+Use GPU: cuda:0
+
+<<<<<<< postprocessing with trainset : ELC_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+load model ...
+val 2537
+train 18221
+test 5165
+val_loss=0.3241 mae_loss=0.4381
+remove_val_loss=0.3679 remove_mae_loss=0.4370
+Validation loss decreased (inf --> 0.324050).  Saving model ...
+test_loss=0.3703 mae_loss=0.4697
+Updating learning rate to 0.0001
+val_loss=0.3285 mae_loss=0.4425
+remove_val_loss=0.3628 remove_mae_loss=0.4330
+EarlyStopping counter: 1 out of 3
+test_loss=0.3706 mae_loss=0.4698
+Updating learning rate to 5e-05
+val_loss=0.3289 mae_loss=0.4431
+remove_val_loss=0.3626 remove_mae_loss=0.4326
+EarlyStopping counter: 2 out of 3
+test_loss=0.3701 mae_loss=0.4696
+Updating learning rate to 2.5e-05
+val_loss=0.3296 mae_loss=0.4437
+remove_val_loss=0.3623 remove_mae_loss=0.4323
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+>>>>>>> postprocessing test with trainset : ELC_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+test 5165
+loading checkpoint.pth ...
+post_ckpt_False.pth ...
+test shape: (5165, 1, 96, 321) (5165, 1, 96, 321)
+test shape: (5165, 96, 321) (5165, 96, 321)
+mse:0.370356, mae:0.469730, rmse:0.608569, mape:2.040157, mspe:561171.000000,

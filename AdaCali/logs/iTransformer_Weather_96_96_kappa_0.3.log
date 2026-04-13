@@ -1,0 +1,48 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Weather_96_96', model='iTransformer', data='custom', root_path='/nfs/daojun/Data/TS_Small', data_path='weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, seasonal_patterns='Monthly', d_block=96, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, attn=1, gate=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=3, learning_rate=0.0001, des='test', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='None', efficient_training=False, channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', post_train_lr=0.0001, continue_train_lr=1e-07, num_episodes=10, gamma=0.9, lmbda=0.9, eps=0.2, patch_len=2, stride=2, fc_dropout=0.05, head_dropout=0.0, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, version='Fourier', mode_select='random', modes=64, kappa=0.3, enc_in=21, dec_in=21, c_out=21)
+Use GPU: cuda:0
+
+<<<<<<< postprocessing with trainset : Weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+kappa: 0.3
+load model ...
+val 5175
+train 36696
+test 10444
+random val_loss=0.7159 mae_loss=0.5259
+val_loss=0.6531 mae_loss=0.4726
+remove_val_loss=0.6523 remove_mae_loss=0.4716
+Validation loss decreased (inf --> 0.653062).  Saving model ...
+test_loss=0.3478 mae_loss=0.3970
+Updating learning rate to 0.0001
+val_loss=0.6579 mae_loss=0.4726
+remove_val_loss=0.6574 remove_mae_loss=0.4720
+EarlyStopping counter: 1 out of 3
+test_loss=0.3489 mae_loss=0.3989
+Updating learning rate to 5e-05
+val_loss=0.6503 mae_loss=0.4709
+remove_val_loss=0.6488 remove_mae_loss=0.4703
+Validation loss decreased (0.653062 --> 0.650274).  Saving model ...
+test_loss=0.3479 mae_loss=0.3982
+Updating learning rate to 2.5e-05
+val_loss=0.6507 mae_loss=0.4712
+remove_val_loss=0.6496 remove_mae_loss=0.4705
+EarlyStopping counter: 1 out of 3
+test_loss=0.3466 mae_loss=0.3974
+Updating learning rate to 1.25e-05
+val_loss=0.6508 mae_loss=0.4711
+remove_val_loss=0.6494 remove_mae_loss=0.4704
+EarlyStopping counter: 2 out of 3
+test_loss=0.3470 mae_loss=0.3977
+Updating learning rate to 6.25e-06
+val_loss=0.6506 mae_loss=0.4711
+remove_val_loss=0.6501 remove_mae_loss=0.4707
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+>>>>>>> postprocessing test with trainset : Weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+test 10444
+loading checkpoint.pth ...
+post_ckpt_False.pth ...
+test shape: (10444, 1, 96, 21) (10444, 1, 96, 21)
+test shape: (10444, 96, 21) (10444, 96, 21)
+mse:0.186626, mae:0.260098, rmse:0.432002, mape:10.049213, mspe:11291937.000000,

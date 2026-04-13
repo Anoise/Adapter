@@ -1,0 +1,69 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_96_96', model='iTransformer', data='ETTm2', root_path='/nfs/daojun/Data/TS_Small', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, seasonal_patterns='Monthly', d_block=96, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, attn=1, gate=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=3, learning_rate=0.0001, des='test', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='None', efficient_training=False, channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', post_train_lr=0.0001, continue_train_lr=1e-07, num_episodes=10, gamma=0.9, lmbda=0.9, eps=0.2, patch_len=2, stride=2, fc_dropout=0.05, head_dropout=0.0, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, version='Fourier', mode_select='random', modes=64, kappa=0.3, enc_in=7, dec_in=7, c_out=7)
+Use GPU: cuda:0
+
+<<<<<<< postprocessing with trainset : ETTm2_96_96_iTransformer_ETTm2_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+kappa: 0.3
+load model ...
+val 11425
+train 34369
+test 11425
+random val_loss=1.3259 mae_loss=0.8105
+val_loss=0.8287 mae_loss=0.6289
+remove_val_loss=0.8199 remove_mae_loss=0.6242
+Validation loss decreased (inf --> 0.828663).  Saving model ...
+test_loss=1.8235 mae_loss=1.0234
+Updating learning rate to 0.0001
+val_loss=0.8260 mae_loss=0.6291
+remove_val_loss=0.8188 remove_mae_loss=0.6260
+Validation loss decreased (0.828663 --> 0.826026).  Saving model ...
+test_loss=1.7802 mae_loss=1.0090
+Updating learning rate to 5e-05
+val_loss=0.8206 mae_loss=0.6250
+remove_val_loss=0.8146 remove_mae_loss=0.6222
+Validation loss decreased (0.826026 --> 0.820603).  Saving model ...
+test_loss=1.7610 mae_loss=1.0052
+Updating learning rate to 2.5e-05
+val_loss=0.8212 mae_loss=0.6252
+remove_val_loss=0.8160 remove_mae_loss=0.6227
+EarlyStopping counter: 1 out of 3
+test_loss=1.7619 mae_loss=1.0052
+Updating learning rate to 1.25e-05
+val_loss=0.8192 mae_loss=0.6242
+remove_val_loss=0.8139 remove_mae_loss=0.6217
+Validation loss decreased (0.820603 --> 0.819183).  Saving model ...
+test_loss=1.7614 mae_loss=1.0047
+Updating learning rate to 6.25e-06
+val_loss=0.8174 mae_loss=0.6237
+remove_val_loss=0.8123 remove_mae_loss=0.6213
+Validation loss decreased (0.819183 --> 0.817384).  Saving model ...
+test_loss=1.7590 mae_loss=1.0042
+Updating learning rate to 3.125e-06
+val_loss=0.8158 mae_loss=0.6231
+remove_val_loss=0.8107 remove_mae_loss=0.6208
+Validation loss decreased (0.817384 --> 0.815825).  Saving model ...
+test_loss=1.7586 mae_loss=1.0041
+Updating learning rate to 1.5625e-06
+val_loss=0.8151 mae_loss=0.6229
+remove_val_loss=0.8104 remove_mae_loss=0.6208
+Validation loss decreased (0.815825 --> 0.815110).  Saving model ...
+test_loss=1.7581 mae_loss=1.0040
+Updating learning rate to 7.8125e-07
+val_loss=0.8149 mae_loss=0.6229
+remove_val_loss=0.8097 remove_mae_loss=0.6205
+Validation loss decreased (0.815110 --> 0.814897).  Saving model ...
+test_loss=1.7577 mae_loss=1.0039
+Updating learning rate to 3.90625e-07
+val_loss=0.8147 mae_loss=0.6227
+remove_val_loss=0.8094 remove_mae_loss=0.6204
+Validation loss decreased (0.814897 --> 0.814655).  Saving model ...
+test_loss=1.7577 mae_loss=1.0039
+Updating learning rate to 1.953125e-07
+
+>>>>>>> postprocessing test with trainset : ETTm2_96_96_iTransformer_ETTm2_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+test 11425
+loading checkpoint.pth ...
+post_ckpt_False.pth ...
+test shape: (11425, 1, 96, 7) (11425, 1, 96, 7)
+test shape: (11425, 96, 7) (11425, 96, 7)
+mse:0.609946, mae:0.529030, rmse:0.780990, mape:1.350218, mspe:254.366653,

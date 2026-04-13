@@ -1,0 +1,90 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_96', model='iTransformer', data='custom', root_path='/harbor-data/daojun/Data/TS_Small', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, seasonal_patterns='Monthly', d_block=96, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, attn=1, gate=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='test', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='None', efficient_training=False, channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', post_train_lr=0.0001, continue_train_lr=1e-07, num_episodes=10, gamma=0.9, lmbda=0.9, eps=0.2, patch_len=2, stride=2, fc_dropout=0.05, head_dropout=0.0, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, version='Fourier', mode_select='random', modes=64, enc_in=8, dec_in=8, c_out=8)
+Use GPU: cuda:0
+
+>>>>>>> start training : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.2333
+	speed: 0.0167s/iter; left time: 25.1024s
+Epoch: 1 cost time: 2.3517377376556396
+Epoch: 1, Steps: 160 | Train Loss: 0.2186 Vali Loss: 0.2029 Val MAE Loss: 0.3341 Test Loss: 0.1435 Test MAE Loss: 0.2738
+Validation loss decreased (inf --> 0.202896).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.1348
+	speed: 0.0993s/iter; left time: 133.2210s
+Epoch: 2 cost time: 2.6662089824676514
+Epoch: 2, Steps: 160 | Train Loss: 0.1317 Vali Loss: 0.1221 Val MAE Loss: 0.2394 Test Loss: 0.0879 Test MAE Loss: 0.2083
+Validation loss decreased (0.202896 --> 0.122098).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0754
+	speed: 0.1064s/iter; left time: 125.6139s
+Epoch: 3 cost time: 2.761559009552002
+Epoch: 3, Steps: 160 | Train Loss: 0.1131 Vali Loss: 0.1260 Val MAE Loss: 0.2461 Test Loss: 0.0921 Test MAE Loss: 0.2149
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0896
+	speed: 0.1020s/iter; left time: 104.1866s
+Epoch: 4 cost time: 2.780696392059326
+Epoch: 4, Steps: 160 | Train Loss: 0.1046 Vali Loss: 0.1319 Val MAE Loss: 0.2489 Test Loss: 0.0966 Test MAE Loss: 0.2205
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.1075
+	speed: 0.1038s/iter; left time: 89.3781s
+Epoch: 5 cost time: 2.276794910430908
+Epoch: 5, Steps: 160 | Train Loss: 0.1002 Vali Loss: 0.1336 Val MAE Loss: 0.2489 Test Loss: 0.1010 Test MAE Loss: 0.2262
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+>>>>>>> just testing : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+loading model x-mul .......
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+mse:0.127757, mae:0.256754, rmse:0.357432, mape:1.511503, mspe:1279.536865,
+
+<<<<<<< continue training with trianset: Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+continue training the model....
+load model ...
+train 5120
+test 1422
+test_loss=0.0876 mae_loss=0.2081
+test_loss=0.0871 mae_loss=0.2077
+test_loss=0.0866 mae_loss=0.2072
+test_loss=0.0864 mae_loss=0.2072
+test_loss=0.0864 mae_loss=0.2074
+test_loss=0.0865 mae_loss=0.2077
+test_loss=0.0868 mae_loss=0.2081
+test_loss=0.0873 mae_loss=0.2087
+test_loss=0.0877 mae_loss=0.2092
+test_loss=0.0880 mae_loss=0.2097
+
+<<<<<<< postprocessing with trainset : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+load model ...
+val 665
+train 5120
+test 1422
+val_loss=0.1438 mae_loss=0.2729
+Validation loss decreased (inf --> 0.143798).  Saving model ...
+test_loss=0.0930 mae_loss=0.2231
+Updating learning rate to 0.0001
+val_loss=0.2420 mae_loss=0.3627
+EarlyStopping counter: 1 out of 3
+test_loss=0.1213 mae_loss=0.2590
+Updating learning rate to 5e-05
+val_loss=0.1813 mae_loss=0.3111
+EarlyStopping counter: 2 out of 3
+test_loss=0.1105 mae_loss=0.2455
+Updating learning rate to 2.5e-05
+val_loss=0.1678 mae_loss=0.2980
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+>>>>>>> postprocessing test with trainset : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+test 1422
+loading checkpoint.pth ...
+post_ckpt_False.pth ...
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+mse:0.107804, mae:0.242211, rmse:0.328336, mape:1.189418, mspe:810.831421,
