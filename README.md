@@ -12,8 +12,7 @@
 We propose post-hoc, a lightweight, architecture-agnostic way to boost deployed time series forecasters without retraining.
 
 
-## Citation
-
+### Citation
 ```
 @inproceedings{
 liang2026the,
