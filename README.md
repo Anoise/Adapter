@@ -1,16 +1,10 @@
 # $\delta$-Adapter (ICLR-26 Accepted! 🎉🎉🎉)
 ### Title: The Forecast After the Forecast: A Post-Processing Shift in Time Series
-### link: https://iclr.cc/virtual/2026/poster/10007022
-### Arxiv: https://arxiv.org/abs/2601.20280
-### openreview: https://openreview.net/forum?id=syfWdclGE1
-### WeChat: 
-### Zhihu: 
-### CSDN:
+TL;DR: We propose post-hoc, a lightweight, architecture-agnostic way to boost deployed time series forecasters without retraining. ✨
 
-## 1. TL;DR: ✨
+### [ICLR Link](https://iclr.cc/virtual/2026/poster/10007022)  | [Arxiv](https://arxiv.org/abs/2601.20280) |  [Openreview](https://openreview.net/forum?id=syfWdclGE1) | [WeChat Blog](https://mp.weixin.qq.com/s/XUatE8yKiqfet8AN2O0GUw)  | [CSDN](https://blog.csdn.net/liangdaojun/article/details/160088150?spm=1011.2415.3001.10575&sharefrom=mp_manage_link)
 
-We propose post-hoc, a lightweight, architecture-agnostic way to boost deployed time series forecasters without retraining.
-
+<div align=center><img src="Images/ICLR26-Thumbnail.png"></div>
 
 ### Citation
 ```
